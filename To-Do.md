@@ -2,8 +2,8 @@
 
 ## Component Requirements
 
-- [ ] Create a TextInput component that handles user input and communicates changes to its parent.
-- [ ] Create a StatsDisplay component that shows various statistics about the text.
+- [x] Create a TextInput component that handles user input and communicates changes to its parent.
+- [x] Create a StatsDisplay component that shows various statistics about the text.
 - [ ] Create a CharacterCounter component that combines the above components and manages the state.
 
 ## Activity Tasks
@@ -11,16 +11,15 @@
 ### Component Implementation:
 
 - [ ] Implement each component according to its interface requirements.
-- [ ] Use useState to manage text input and statistics.
-- [ ] Implement event handlers for text changes.
+- [x] Use useState to manage text input and statistics.
+- [x] Implement event handlers for text changes.
 - [ ] Calculate statistics in real-time.
 
 ### State Management:
 
-- [ ] Track the current text input.
+- [x] Track the current text input.
 - [ ] Calculate and update statistics when text changes.
 - [ ] Handle edge cases (empty input, very long text).
-- [ ] User Interface:
 
 ### Create a responsive layout.
 

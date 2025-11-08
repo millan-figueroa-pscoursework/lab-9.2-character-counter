@@ -1,6 +1,7 @@
 import "./index.css";
 import { useState } from "react";
-import { TextInput } from "./components/TextInput/TextInput";
+import TextInput from "./components/TextInput/TextInput";
+import StatsDisplay from "./components/StatsDisplay/StatsDisplay";
 
 function App() {
   // holds typed value, updates value, initializes to empty string

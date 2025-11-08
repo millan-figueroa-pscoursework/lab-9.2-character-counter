@@ -1,6 +1,6 @@
 import type { TextInputProps } from "../../types";
 
-export function TextInput({
+export default function TextInput({
   onTextChange,
   placeholder = "Start typing...",
   initialValue = "",
