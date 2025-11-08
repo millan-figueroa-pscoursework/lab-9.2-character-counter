@@ -2,6 +2,7 @@ import "./index.css";
 import { useState } from "react";
 import TextInput from "./components/TextInput/TextInput";
 import StatsDisplay from "./components/StatsDisplay/StatsDisplay";
+import type { TextStats } from "./types";
 
 function App() {
   // holds typed value, updates value, initializes to empty string
@@ -10,6 +11,12 @@ function App() {
   // tells TextInput component how to update state in parent
   const handleTextChange = (value: string) => {
     setText(value);
+  };
+
+  const stats: TextStats = {
+    characterCount: text.length,
+    wordCount: 0,
+    readingTime: 0,
   };
 
   return (
@@ -21,8 +28,9 @@ function App() {
         placeholder="Type your text..."
         initialValue=""
       />
-      {/* displays character count by using .length */}
-      <p className="mt-2 text-gray-600">Character count: {text.length}</p>
+      <div className="mt-6">
+        <StatsDisplay stats={stats} showReadingTime={true} />
+      </div>
     </>
   );
 }

@@ -14,3 +14,4 @@ export interface StatsDisplayProps {
     stats: TextStats;
     showReadingTime?: boolean;
 }
+

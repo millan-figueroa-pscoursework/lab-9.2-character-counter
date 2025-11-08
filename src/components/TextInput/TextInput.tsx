@@ -1,5 +1,6 @@
 import type { TextInputProps } from "../../types";
 
+// just renders text area and notifies when text changes
 export default function TextInput({
   onTextChange,
   placeholder = "Start typing...",

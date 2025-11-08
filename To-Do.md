@@ -28,9 +28,9 @@
 
 ### Component Communication:
 
-- [ ] Use callbacks to pass data between components.
-- [ ] Ensure proper prop typing.
-- [ ] Handle optional props appropriately.
+- [x] Use callbacks to pass data between components.
+- [x] Ensure proper prop typing.
+- [x] Handle optional props appropriately.
 
 ## Reflection Questions
 
