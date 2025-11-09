@@ -11,10 +11,22 @@ export default function CharacterCounter({
   // holds typed value, updates value, initializes to empty string
   const [text, setText] = useState("");
 
+  const wordCounter = (text: string) => {
+    // removes trailing spaces from text value
+    const trimmedText = text.trim();
+    // if user tabs or types nothing it doesnt count as a word (return 0 words)
+    if (trimmedText.length === 0) {
+      return 0;
+    }
+    // creates array of each word (using split() method and add space between quotes)
+    const wordsArray = trimmedText.split(" ");
+    return wordsArray.length;
+  };
+
   // placeholder stats
   const stats: TextStats = {
     characterCount: text.length,
-    wordCount: 0,
+    wordCount: wordCounter(text),
     readingTime: 0,
   };
 
