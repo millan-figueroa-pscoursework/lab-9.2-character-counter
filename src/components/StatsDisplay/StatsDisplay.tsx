@@ -5,6 +5,7 @@ export default function StatsDisplay({
   showReadingTime = true,
   minWords,
   maxWords,
+  targetReadingTime,
 }: StatsDisplayProps) {
   // destructure prop
   const { characterCount, wordCount, readingTime } = stats;
@@ -70,6 +71,30 @@ export default function StatsDisplay({
           </div>
         </div>
       )}
+
+      {/* conditional rendering optional props */}
+      <div className="mt-4 text-md text-gray-400">
+        {minWords !== undefined && maxWords !== undefined && (
+          <>
+            <p>
+              Word range: {minWords}-{maxWords}
+            </p>
+            {wordCount < minWords && (
+              <p className="text-red-500">Too short! Add more words.</p>
+            )}
+            {wordCount > maxWords && (
+              <p className="text-red-500">Too long! Try shortening it.</p>
+            )}
+            {wordCount >= minWords && wordCount <= maxWords && (
+              <p className="text-green-400">✔️ Within word range!</p>
+            )}
+          </>
+        )}
+
+        {targetReadingTime !== undefined && (
+          <p>Target reading time: {targetReadingTime} min</p>
+        )}
+      </div>
     </div>
   );
 }

@@ -15,11 +15,11 @@ export interface StatsDisplayProps {
     showReadingTime?: boolean;
     minWords?: number;
     maxWords?: number;
+    targetReadingTime?: number; // in minutes
 }
 
 export interface CharacterCounterProps {
     minWords?: number;
     maxWords?: number;
-    targetReadingTime?: number; // in minutes
 }
 

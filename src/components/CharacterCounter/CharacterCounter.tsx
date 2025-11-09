@@ -6,7 +6,6 @@ import type { CharacterCounterProps, TextStats } from "../../types";
 export default function CharacterCounter({
   minWords,
   maxWords,
-  targetReadingTime,
 }: CharacterCounterProps) {
   // holds typed value, updates value, initializes to empty string
   const [text, setText] = useState("");
@@ -62,30 +61,6 @@ export default function CharacterCounter({
           minWords={minWords}
           maxWords={maxWords}
         />
-      </div>
-
-      {/* conditional rendering optional props */}
-      <div className="mt-4 text-md text-gray-400">
-        {minWords !== undefined && maxWords !== undefined && (
-          <>
-            <p>
-              Word range: {minWords}-{maxWords}
-            </p>
-            {wordCount < minWords && (
-              <p className="text-red-500">Too short! Add more words.</p>
-            )}
-            {wordCount > maxWords && (
-              <p className="text-red-500">Too long! Try shortening it.</p>
-            )}
-            {wordCount >= minWords && wordCount <= maxWords && (
-              <p className="text-yellow-200">🚦 Within word range.</p>
-            )}
-          </>
-        )}
-
-        {targetReadingTime !== undefined && (
-          <p>Target reading time: {targetReadingTime} min</p>
-        )}
       </div>
     </div>
   );

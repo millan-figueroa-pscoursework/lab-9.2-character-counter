@@ -9,7 +9,7 @@ export default function TextInput({
   return (
     <div className="w-full pt-2">
       <textarea
-        className="w-full bg-slate-200 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
+        className="w-full bg-slate-300 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
         placeholder={placeholder}
         defaultValue={initialValue}
         onChange={(e) => onTextChange(e.target.value)}
