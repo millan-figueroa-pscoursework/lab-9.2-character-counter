@@ -19,7 +19,9 @@ export default function CharacterCounter({
     }
     // creates array of each word (using split() method and add space between quotes)
     const wordsArray = trimmedText.split(" ");
-    return wordsArray.length;
+    // Filter out accidental empty strings
+    const nonEmptyWords = wordsArray.filter((word) => word !== "");
+    return nonEmptyWords.length;
   };
 
   const getReadingTimeinMns = (wordCount: number) => {

@@ -16,7 +16,7 @@ export default function StatsDisplay({
     progress = Math.min((wordCount / maxWords) * 100, 100);
   }
 
-  let progressColor = "bg-blue-500";
+  let progressColor = "bg-gray-300"; // fallback clor
   if (minWords !== undefined && wordCount < minWords) {
     progressColor = "bg-red-400";
   } else if (maxWords !== undefined && wordCount > maxWords) {
