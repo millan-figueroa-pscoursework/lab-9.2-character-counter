@@ -23,16 +23,24 @@ export default function CharacterCounter({
     return wordsArray.length;
   };
 
-  // placeholder stats
-  const stats: TextStats = {
-    characterCount: text.length,
-    wordCount: wordCounter(text),
-    readingTime: 0,
+  const getReadingTimeinMns = (wordCount: number) => {
+    const wpm = 200; // avg wpm
+    return wordCount / wpm;
   };
 
   // tells TextInput component how to update state in parent
   const handleTextChange = (value: string) => {
     setText(value);
+  };
+
+  // declare variables to assign them in TextStats
+  const wordCount = wordCounter(text);
+  //   const readingTime = getReadingTimeinMns(wordCount);
+
+  const stats: TextStats = {
+    characterCount: text.length,
+    wordCount: wordCounter(text),
+    readingTime: getReadingTimeinMns(wordCount),
   };
 
   return (
