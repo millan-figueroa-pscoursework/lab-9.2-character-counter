@@ -56,7 +56,12 @@ export default function CharacterCounter({
         initialValue=""
       />
       <div className="mt-6">
-        <StatsDisplay stats={stats} showReadingTime={true} />
+        <StatsDisplay
+          stats={stats}
+          showReadingTime={true}
+          minWords={minWords}
+          maxWords={maxWords}
+        />
       </div>
 
       {/* conditional rendering optional props */}
