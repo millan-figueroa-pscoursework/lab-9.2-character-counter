@@ -60,10 +60,22 @@ export default function CharacterCounter({
       {/* conditional rendering optional props */}
       <div className="mt-4 text-sm text-gray-500">
         {minWords !== undefined && maxWords !== undefined && (
-          <p>
-            Word range: {minWords}–{maxWords}
-          </p>
+          <>
+            <p>
+              Word range: {minWords}–{maxWords}
+            </p>
+            {wordCount < minWords && (
+              <p className="text-red-500">Too short! Add more words.</p>
+            )}
+            {wordCount > maxWords && (
+              <p className="text-red-500">Too long! Try shortening it.</p>
+            )}
+            {wordCount >= minWords && wordCount <= maxWords && (
+              <p className="text-green-600">✅ Within word range.</p>
+            )}
+          </>
         )}
+
         {targetReadingTime !== undefined && (
           <p>Target reading time: {targetReadingTime} min</p>
         )}
