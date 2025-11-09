@@ -1,8 +1,15 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body {
+  background-color: #1e2939;
+  margin: 0;
+  padding: 150px;
 }

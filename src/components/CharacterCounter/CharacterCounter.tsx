@@ -45,7 +45,9 @@ export default function CharacterCounter({
 
   return (
     <div className="w-full">
-      <h1 className="text-3xl font-bold underline mb-4">Character Counter</h1>
+      <h1 className="border border-gray-400 rounded-lg text-3xl text-gray-400 font-bold py-6 mb-4">
+        Character Counter
+      </h1>
 
       <TextInput
         // updates parent state w new text
@@ -58,11 +60,11 @@ export default function CharacterCounter({
       </div>
 
       {/* conditional rendering optional props */}
-      <div className="mt-4 text-sm text-gray-500">
+      <div className="mt-4 text-md text-gray-400">
         {minWords !== undefined && maxWords !== undefined && (
           <>
             <p>
-              Word range: {minWords}–{maxWords}
+              Word range: {minWords}-{maxWords}
             </p>
             {wordCount < minWords && (
               <p className="text-red-500">Too short! Add more words.</p>
@@ -71,7 +73,7 @@ export default function CharacterCounter({
               <p className="text-red-500">Too long! Try shortening it.</p>
             )}
             {wordCount >= minWords && wordCount <= maxWords && (
-              <p className="text-green-600">✅ Within word range.</p>
+              <p className="text-yellow-200">🚦 Within word range.</p>
             )}
           </>
         )}
